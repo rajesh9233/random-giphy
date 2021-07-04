@@ -1,7 +1,7 @@
-const randomWordURi = "https://random-word-api.herokuapp.com/word?number=1"
-const giphyURi = "https://api.giphy.com/v1/gifs/search?api_key=0bsj8IKQ1Tq5j5U3PAJURas6FfL9ga3t&limit=25&offset=0&rating=g&lang=en&q="
-const wordId = document.getElementById('word');
-const gifRow = document.getElementById('gif-row');
+let randomWordURi = "https://random-word-api.herokuapp.com/word?number=1"
+let giphyURi = "https://api.giphy.com/v1/gifs/search?api_key=0bsj8IKQ1Tq5j5U3PAJURas6FfL9ga3t&limit=25&offset=0&rating=g&lang=en&q="
+let wordId = document.getElementById('word');
+let gifRow = document.getElementById('gif-row');
 
 async function getGIF(){
     try {
