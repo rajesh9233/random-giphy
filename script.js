@@ -31,4 +31,4 @@ async function getGIF(){
     }
 }
 
-getGIF();
+// getGIF();
