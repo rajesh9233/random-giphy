@@ -5,18 +5,18 @@ let gifRow = document.getElementById('gif-row');
 
 async function getGIF(){
     try {
-        let resp1 = await fetch(randomWordURi);
-        let data = await resp1.json();
-        let word = data[0];
-        console.log(word)
-        let resp2 = await fetch(giphyURi + word);
+        // let resp1 = await fetch(randomWordURi);
+        // let data = await resp1.json();
+        // let word = data[0];
+        // console.log(word)
+        let resp2 = await fetch(giphyURi + 'vadivelu');
         let data2 = await resp2.json();
         const gif = data2.data
-        wordId.innerHTML = word;
-        console.log(gif);
-        if(gif.length === 0){
-            wordId.innerHTML = 'No GiF found for the word' + word; 
-        }
+        // wordId.innerHTML = word;
+        // console.log(gif);
+        // if(gif.length === 0){
+        //     wordId.innerHTML = 'No GiF found for the word' + word; 
+        // }
         gif.forEach(item=>{
             const col = document.createElement('div');
             col.setAttribute('class','col-4')
