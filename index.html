@@ -12,7 +12,11 @@
         <!-- <div class="btn btn-primary" onclick="getGIF()">GET</div> -->
         <div class="text-center display-4 my-5" id="word"></div>
         <div class="row" id="gif-row">
-
+            <div class="col-12">
+                <div class="form-group">
+                    <input type="text" name="word" id="word" class="form-control" onchange="getGIF(this)">
+                </div>
+            </div>
         </div>
     </div>
     <script src="script.js"/>

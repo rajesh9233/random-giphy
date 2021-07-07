@@ -3,20 +3,22 @@ let giphyURi = "https://api.giphy.com/v1/gifs/search?api_key=Cc0cDk9PZZMUNjMgvr0
 let wordId = document.getElementById('word');
 let gifRow = document.getElementById('gif-row');
 
-async function getGIF(){
+async function getGIF(event){
     try {
+        
+        console.log(event.value);
         let resp1 = await fetch(randomWordURi);
         let data = await resp1.json();
         let word = data[0];
         console.log(word)
-        let resp2 = await fetch(giphyURi + 'smile');
+        let resp2 = await fetch(giphyURi + event.value);
         let data2 = await resp2.json();
         const gif = data2.data
         console.log(data2,gif);
-        wordId.innerHTML = word;
+        wordId.innerHTML = event.value;
         console.log(gif);
         if(gif.length === 0){
-            wordId.innerHTML = 'No GiF found for the word' + word; 
+            wordId.innerHTML = 'No GiF found for the word' + event.value; 
         }
         gif.forEach(item=>{
             const col = document.createElement('div');
@@ -31,4 +33,4 @@ async function getGIF(){
     }
 }
 
-getGIF();
+// getGIF();
