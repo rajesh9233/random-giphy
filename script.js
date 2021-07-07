@@ -5,7 +5,7 @@ let gifRow = document.getElementById('gif-row');
 
 async function getGIF(event){
     try {
-        
+        // gifRow.remove();
         console.log(event.value);
         let resp1 = await fetch(randomWordURi);
         let data = await resp1.json();
